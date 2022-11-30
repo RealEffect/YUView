@@ -44,3 +44,7 @@ If none of these apply to you, you can easily [build YUView yourself](https://gi
 ## Building
 
 Compiling YUView from source is easy! We use qmake for the project so on all supported platforms you just have to install qt and run `qmake` and `make` to build YUView. There are no further dependent libraries. Alternatively, you can use the QTCreator if you prefer a GUI. More help on building YUView can be found in the [wiki](https://github.com/IENT/YUView/wiki/Compile-YUView).
+
+I add [`CMake`](https://cmake.org/)，but just test in Windows® for now. If you test done on other platform, please tell me or you can commit merge request to improvement it.
+
+> Why CMake? Just my(maybe also you) custom.
