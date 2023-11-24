@@ -94,6 +94,10 @@ void BitstreamAnalysisWidget::updateParserItemModel()
 void BitstreamAnalysisWidget::updateStreamInfo()
 {
   this->ui.streamInfoTreeWidget->clear();
+  if (this->parser.isNull())
+  {
+      return;
+  }
   this->ui.streamInfoTreeWidget->addTopLevelItems(this->parser->getStreamInfo());
   this->ui.streamInfoTreeWidget->expandAll();
 
