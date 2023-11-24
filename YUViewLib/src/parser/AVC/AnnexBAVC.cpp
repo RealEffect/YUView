@@ -466,7 +466,7 @@ AnnexBAVC::parseAndAddNALUnit(int                                           nalI
   std::optional<int> curSlicePoc;
   if (currentSliceData)
     curSlicePoc = currentSliceData->poc;
-  if (this->curFrameData && this->auDelimiterDetector.isStartOfNewAU(nalAVC, curSlicePoc))
+  if (this->curFrameData && this->curFrameData->poc && this->auDelimiterDetector.isStartOfNewAU(nalAVC, curSlicePoc))
   {
     // Save the info of the last frame
     if (!this->addFrameToList(*this->curFrameData->poc,

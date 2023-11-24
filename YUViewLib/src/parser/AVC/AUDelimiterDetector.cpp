@@ -38,7 +38,7 @@ namespace parser::avc
 {
 
 bool AUDelimiterDetector::isStartOfNewAU(std::shared_ptr<NalUnitAVC> nal,
-                                         std::optional<int>          curFramePOC)
+                                         const std::optional<int>& curFramePOC)
 {
   const auto isSlice = (nal->header.nal_unit_type == NalType::CODED_SLICE_NON_IDR ||
                         nal->header.nal_unit_type == NalType::CODED_SLICE_IDR);
